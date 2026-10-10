@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SignalShield explains whether a suspicious message is safe, suspicious, or high risk.">
+  <title>SignalShield — Understand before you click</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#"><span class="brand-mark">S</span> SignalShield</a>
+    <div class="nav-right"><span class="status"><i></i> Analysis ready</span><a href="#how">How it works</a></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">AI + Cybersecurity · ForgeHacks 2026</div>
+      <h1>Understand the threat.<br><em>Before you click.</em></h1>
+      <p>Paste a suspicious email or text. SignalShield turns technical warning signs into a clear risk score, human-readable evidence, and safe next steps.</p>
+      <div class="trust"><span>✓ Private by default</span><span>✓ Explainable results</span><span>✓ No sign-up</span></div>
+    </section>
+
+    <section class="workspace">
+      <div class="card composer">
+        <div class="card-head">
+          <div><span class="step">01</span><h2>Message to inspect</h2></div>
+          <button id="clear" class="text-btn" type="button">Clear</button>
+        </div>
+        <div class="samples" aria-label="Load an example">
+          <span>Try an example</span>
+          <button data-sample="phishing">Phishing alert</button>
+          <button data-sample="ambiguous">Tricky invoice</button>
+          <button data-sample="safe">Safe reminder</button>
+        </div>
+        <form id="analyze-form">
+          <label>Sender <span>optional</span><input id="sender" placeholder="Name <address@example.com>"></label>
+          <label>Subject <span>optional</span><input id="subject" placeholder="Email subject line"></label>
+          <label>Message <span>required</span><textarea id="body" rows="10" required placeholder="Paste the suspicious message here…"></textarea></label>
+          <div class="form-foot"><small>Your message is never stored.</small><button class="primary" type="submit"><span>Analyze message</span><b>→</b></button></div>
+        </form>
+      </div>
+
+      <div id="result" class="card result empty" aria-live="polite">
+        <div class="empty-state"><div class="radar"><span></span></div><h2>Your analysis will appear here</h2><p>SignalShield checks language, links, sender identity, urgency, and manipulation patterns.</p></div>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <div><span class="step">02</span><h2>More than a black-box verdict</h2></div>
+      <p>SignalShield combines deterministic security signals with optional language-model reasoning. Every verdict points to observable evidence, and the AI sees messages as untrusted data—not instructions.</p>
+      <div class="features">
+        <article><b>01</b><h3>Extract signals</h3><p>Find risky links, sender mismatches, credential requests, urgency, threats, and payment pressure.</p></article>
+        <article><b>02</b><h3>Reason in context</h3><p>An AI second opinion weighs how the signals interact instead of matching isolated keywords.</p></article>
+        <article><b>03</b><h3>Act safely</h3><p>Get concrete steps to verify the request through a trusted, independent channel.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><span>SignalShield · Built for safer digital communities</span><span>Not a replacement for professional security review.</span></footer>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
